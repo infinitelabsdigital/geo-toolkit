@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo-toolkit"
+version = "0.1.0"
+description = "Open-source GEO audit toolkit — measure and improve how your content gets cited by AI search engines like ChatGPT, Perplexity, and Google AI Overviews"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [
+    {name = "Infinite Labs Digital", email = "info@infinitelabsdigital.com"},
+]
+keywords = [
+    "geo", "generative-engine-optimization", "ai-search", "seo",
+    "chatgpt", "perplexity", "google-ai-overviews", "llm",
+    "citability", "content-optimization", "ai-visibility", "llms-txt",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Other Audience",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "scrapling>=0.2",
+    "click>=8.0",
+    "rich>=13.0",
+    "protego>=0.3",
+    "trafilatura>=1.0",
+    "extruct>=0.17",
+    "py-readability-metrics>=1.4",
+]
+
+[project.scripts]
+geo-audit = "geo_toolkit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/infinitelabsdigital/geo-toolkit"
+Repository = "https://github.com/infinitelabsdigital/geo-toolkit"
+Issues = "https://github.com/infinitelabsdigital/geo-toolkit/issues"
+
+[tool.setuptools.packages.find]
+include = ["geo_toolkit*"]
